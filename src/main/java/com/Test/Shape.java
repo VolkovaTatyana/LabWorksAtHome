@@ -1,6 +1,6 @@
 package com.Test;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable{
     private String shapeColor;
 
     public String getShapeColor() {
@@ -23,6 +23,10 @@ public abstract class Shape {
     }
 
     public abstract double calcArea();
+    @Override
+    public void draw() {
+        System.out.println(toString());
+    }
 
 
 
