@@ -1,6 +1,6 @@
 package com.Test;
 
-class Rectangle extends Shape {
+class Rectangle extends Shape implements Comparable {
     protected double W;
     private double H;
 
@@ -28,4 +28,8 @@ class Rectangle extends Shape {
     }
 
 
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }

@@ -1,6 +1,6 @@
 package com.Test;
 
-public abstract class Shape implements Drawable{
+public abstract class Shape implements Drawable, Comparable{
     private String shapeColor;
 
     public String getShapeColor() {

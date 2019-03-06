@@ -2,18 +2,19 @@ package com.Test;
 
 public class Geometry {
     public static void main(String[] args) {
-
-        Shape S1 = new Shape("red") {
-            @Override
-            public double calcArea() {
-                return 0;
-            }
-        };
-        Circle C1 = new Circle("red", 22);
+        Drawable [] drawables=new Drawable[3];
+        Circle C1 = new Circle("yellow", 22);
         Rectangle R1 = new Rectangle("Red", 3, 33);
-        R1.draw();
+        Square Sq1= new Square("black",3);
 
-        Shape[] shapes = new Shape[5];
+        drawables[0]=C1;
+        drawables[1]=R1;
+        drawables[2]=Sq1;
+        for(Drawable drawable:drawables){
+            drawable.draw();
+        }
+
+
 
 
     }

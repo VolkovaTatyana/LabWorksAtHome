@@ -1,6 +1,6 @@
 package com.Test;
 
-public class Circle extends Shape{
+public class Circle extends Shape implements Drawable{
 private double radius;
 
 
@@ -28,4 +28,11 @@ private double radius;
 
         return Math.PI*radius*radius;
     }
+
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
 }
+
