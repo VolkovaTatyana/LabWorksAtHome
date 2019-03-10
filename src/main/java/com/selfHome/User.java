@@ -1,58 +1,37 @@
 package com.selfHome;
 
+import java.util.Calendar;
+
 public class User {
     private String name;
     private String surname;
-    private String address;
     private int yearOfBirth;
+    private Object Address;
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public int getYearOfBirth() {
-        return yearOfBirth;
-    }
-
-    public void setYearOfBirth(int yearOfBirth) {
-        this.yearOfBirth = yearOfBirth;
-    }
-
-    public User(String name, String surname, String address, int yearOfBirth) {
+    User(String name, String surname, int yearOfBirth, Object address) {
         this.name = name;
         this.surname = surname;
-        this.address = address;
         this.yearOfBirth = yearOfBirth;
+        Address = address;
+    }
+
+    private int age(int yearOfBirth){
+        return Calendar.getInstance().get(Calendar.YEAR)-yearOfBirth;
     }
 
     @Override
     public String toString() {
-        return "Name: "+getName()+
-                '\n'+"Surname: "+getSurname()+
-                '\n'+"Address: "+getAddress()+
-                '\n'+"Year Of Birth: "+getYearOfBirth();
+        return "User" + '\n' +
+                "name= " + name + '\n' +
+                "surname= " + surname + '\n' +
+                "yearOfBirth= " + yearOfBirth + '\n' +
+                "Address" + '\n' + Address.toString()+
+                 "his age is= "+age(yearOfBirth)+ " years";
+
     }
+}
 
 
-    }
+
+
 
