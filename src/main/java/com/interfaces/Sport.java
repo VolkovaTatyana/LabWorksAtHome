@@ -1,4 +1,4 @@
-package com.selfHome;
+package com.interfaces;
 
 public class Sport {
     public static void main(String[] args) {

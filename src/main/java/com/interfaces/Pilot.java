@@ -1,6 +1,6 @@
-package com.selfHome;
+package com.interfaces;
 
-public class Chessplayer implements SportsMan {
+public class Pilot implements SportsMan {
 
     private String name;
     private String kindOfSport;
@@ -13,13 +13,14 @@ public class Chessplayer implements SportsMan {
         return kindOfSport;
     }
 
-    Chessplayer(String name, String kindOfSport) {
+    Pilot(String name, String kindOfSport) {
         this.name = name;
         this.kindOfSport = kindOfSport;
     }
 
     @Override
     public String Name() {
+
         return getName();
     }
 

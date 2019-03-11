@@ -1,4 +1,4 @@
-package com.selfHome;
+package com.interfaces;
 
 public interface SportsMan {
 
